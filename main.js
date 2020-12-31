@@ -71,7 +71,8 @@ const x = setInterval(function() {
 	let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-	document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+	document.getElementById('countdown').innerHTML = `
+		<span>${days}</span> Day <span>${hours}</span> Hours <span>${minutes}</span> Minutes <span>${seconds}</span> Seconds`;
 
 	if (distance < 0) {
 		clearInterval(x);
